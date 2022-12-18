@@ -1,0 +1,1 @@
+Yolact android app sample
