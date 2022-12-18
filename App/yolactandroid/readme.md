@@ -1,6 +1,18 @@
 욜랙트 안드로이드 앱 견본
+src 폴더 안에 분할압축된 모델 압축해제 후 안드로이드 스튜디오로 빌드
 
-원본
+android sdk 32
+android sdk tools 31.0.0
+
+dependencies {
+    implementation 'org.pytorch:pytorch_android_lite:1.12.2'
+    implementation 'org.pytorch:pytorch_android_torchvision_lite:1.12.2'
+    implementation 'org.pytorch:torchvision_ops:0.13.1'
+}
+
+으로 시험해봄
+
+앱 원본 / 파이토치 안드로이드 데모 앱
 https://github.com/pytorch/android-demo-app
 
 Yolact
