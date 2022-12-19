@@ -1,3 +1,6 @@
+"""
+EDA를 위한 dataframe
+"""
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
