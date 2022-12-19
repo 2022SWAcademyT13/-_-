@@ -1,0 +1,23 @@
+from glob import glob
+
+folder_path = glob('./indobohang/서피스마스킹/*')
+print(len(folder_path))
+
+zip_path = glob('./indobohang/서피스마스킹/*.zip')
+
+folder_path = [path for path in folder_path if path not in zip_path]
+
+from os import listdir
+def fileids(path, ext = None):
+    fileList = list()
+    path = path if path[-1] == '/' else path + '/'
+    for fileName in listdir(path):
+        if fileName.endswith(ext):
+            fileList.append(path + fileName)
+    return fileList
+
+jpg_path = [fileids(path, ext = 'jpg') for path in folder_path]
+xml_path = [fileids(path, ext = 'xml') for path in folder_path]
+png_path = [fileids(path, ext = 'png') for path in folder_path]
+
+img_path = [jpg + png for jpg,png in zip(jpg_path, png_path)]

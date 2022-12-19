@@ -1,0 +1,24 @@
+from bs4 import BeautifulSoup
+from tqdm import tqdm
+
+#filepath 코드로 xml_path 뽑아서 진행
+
+imgdict = dict()
+
+for xml in tqdm(xml_path):
+    xml = BeautifulSoup(open(xml[0], encoding='utf-8'),'xml')
+    for image in xml.select('image'):
+        name = image['name']
+        imgdict[name] = {
+            'height': image['height'],
+            'width' : image['width'],
+            'polygons' : list()
+        }
+        for polygon in image.select('polygon'):
+            label = polygon['label']
+            attr = polygon.text.strip('\n')
+            points = polygon['points']
+            z_order = polygon['z_order']
+            imgdict[name]['polygons'].append([label+'_'+attr, points, z_order])
+
+print(len(imgdict))
