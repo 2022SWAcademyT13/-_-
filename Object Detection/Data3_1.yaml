@@ -1,0 +1,28 @@
+# YOLOv5 🚀 by Ultralytics, GPL-3.0 license
+
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: /content/Bbox/content/drive/MyDrive/Data3_1  # dataset root dir
+train: train
+val: validation
+test: 
+
+# Classes
+names:
+  0: barricade
+  1: bench,chair,table
+  2: bicycle
+  3: bollard,fire_hydrant
+  4: bus
+  5: car
+  6: kiosk,power_controller
+  7: motorcycle,scooter
+  8: movable_signage
+  9: person
+  10: pole
+  11: potted_plant
+  12: stop
+  13: traffic_light
+  14: traffic_light_controller
+  15: tree_trunk
+  16: truck
+  17: traffic_light_car
