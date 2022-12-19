@@ -1,3 +1,7 @@
+"""
+원본 image path를 train, test, validation으로 나눈 후 
+하나의 폴더에 모으기 위한 코드
+"""
 import pandas as pd
 
 train = pd.read_csv("/content/drive/MyDrive/train_name.csv")
